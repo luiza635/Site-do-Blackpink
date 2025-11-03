@@ -1,0 +1,94 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+
+header {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #000;
+  position: fixed; 
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #000000; 
+  z-index: 10;
+}
+
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid pink; 
+  padding: 5px 10px;
+  color: pink;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+nav a:hover {
+  color: pink; 
+}
+
+
+.hero {
+  height: 100vh; 
+  background: url('https://4kwallpapers.com/images/walls/thumbs_3t/19348.jpg') right 0%/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px; 
+}
+
+
+footer {
+  background: #000000;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #000000;
+}
+
+footer a {
+  color: pink;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer a img {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLACKPINK - Sobre o Grupo</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      padding-top: 70px;
+    }
+
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #000;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      border: 2px solid pink;
+      padding: 5px 10px;
+      color: pink;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a.ativo {
+      color: pink;
+    }
+
+
+    .sobre-conteudo {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .sobre-conteudo h1 {
+      color: pink;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .sobre-conteudo h2 {
+      color: white;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      border-left: 5px solid pink;
+      padding-left: 10px;
+    }
+
+    .sobre-conteudo p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .fundo-destaque {
+      background: url('https://www.pixel4k.com/wp-content/uploads/2020/12/blackpink-4k_1607679668-1536x577.jpg') center center/cover no-repeat;
+      height: 400px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.3);
+    }
+
+    /* Rodapé */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 40px;
+      width: 100%;
+      border-top: 1px solid #333;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: pink;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    footer a img {
+      width: 20px;
+      height: 20px;
+    }
+
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 10px;
+      }
+      nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">BLACKPINK</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#" class="ativo">Sobre</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="#">Álbuns</a></li>
+        <li><a href="#">Itens</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="sobre-conteudo">
+    <h1>SOBRE O GRUPO</h1>
+
+    <div class="fundo-destaque"></div>
+    
+    <h2>O Fenômeno Global</h2>
+    <p>
+      O BLACKPINK (블랙핑크) é um <em>girl group</em> sul-coreano formado pela <strong>YG Entertainment</strong>, composto pelas talentosas integrantes <strong>Jisoo, Jennie, Rosé e Lisa</strong>. O nome do grupo simboliza a dualidade: <strong>"Black"</strong> (preto) representa o lado mais forte e <em>girl crush</em>, enquanto <strong>"Pink"</strong> (rosa) representa a beleza e feminilidade.
+    </p>
+    <p>
+      Desde sua estreia em <strong>agosto de 2016</strong> com o álbum <em>Square One</em>, incluindo os sucessos "Whistle" e "BOOMBAYAH", o grupo rapidamente se tornou um dos maiores atos de K-Pop do mundo. Elas são conhecidas por quebrar recordes e sua presença de palco cativante.
+    </p>
+
+    <h2>Impacto e Conquistas</h2>
+    <p>
+      O BLACKPINK não é apenas um grupo musical, mas uma característica cultural. Elas foram o primeiro grupo feminino de K-Pop a se apresentar no festival <strong>Coachella</strong> e detêm vários recordes no YouTube. Além da música, os membros são embaixadores globais de grandes marcas de luxo.
+    </p>
+    <p>
+      Com uma base de fãs dedicados, conhecidos como <strong>BLINKS</strong>, o grupo continua a expandir sua influência globalmente através de turnês mundiais esgotadas e colaborações com artistas internacionais.
+    </p>
+  </main>
+
+  <footer>
+    <a href="https://www.instagram.com/blackpinkofficial/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"> @blackpinkofficial
+    </a>
+  </footer>
+</body>
+</html>
