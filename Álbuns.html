@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BLACKPINK — Discografia</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+  body{background:#000;color:#fff;text-align:center;overflow-x:hidden;padding-top:75px;}
+
+
+  header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:#000;position:fixed;top:0;left:0;width:100%;z-index:1000;border-bottom:1px solid #333}
+  .logo{font-size:20px;font-weight:700;border:2px solid pink;padding:5px 10px;color:pink}
+  nav ul{list-style:none;display:flex;gap:22px}
+  nav a{color:#fff;text-decoration:none;font-weight:700;transition:.2s}
+  nav a:hover, nav a.ativo{color:pink}
+
+  .page-space{height:120px;}
+
+
+  .carousel-wrapper{width:100%;max-width:900px;margin:auto;padding:40px 0;position:relative}
+
+.carousel{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:8px;
+}
+
+.album{
+  flex:0 0 auto;
+  opacity:.5;
+  transform:scale(.9);
+  filter:blur(1px) brightness(.8);
+  transition:all .35s ease;
+  min-width:180px;
+}
+
+
+  .carousel::-webkit-scrollbar{height:8px;display:none}
+  .carousel{scrollbar-width:none;-ms-overflow-style:none}
+
+  .album{
+  flex:0 0 auto;             
+  opacity:.5;
+  transform:scale(.65); /* menor */
+  filter:blur(1px) brightness(.8);
+  transition:all .35s ease;
+  min-width:150px; /* reduzido */
+}
+
+.album img{
+  width:100%;
+  max-width:140px; /* controla o tamanho máximo */
+  display:block;
+  border-radius:8px;
+  border:2px solid #ffb6d9;
+  filter:drop-shadow(0 0 18px rgba(255,182,217,.3));
+  transform:skewX(-4deg);
+}
+
+.album.active{
+  opacity:1;
+  transform:scale(.9) skewX(0deg); /* ativo menor ainda */
+  filter:none;
+}
+
+
+  .arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:50px;
+    cursor:pointer;
+    user-select:none;
+    color:#fff;
+    padding:8px;
+    transition:color .2s;
+  }
+  .arrow:hover{color:#ffb6d9}
+  .arrow.left{left:10px}
+  .arrow.right{right:10px}
+
+  h2{margin-top:18px;font-size:32px;font-weight:700;color:#ffb6d9;letter-spacing:1px;text-transform:uppercase}
+  p{color:#bbb;font-size:15px;margin-top:6px}
+
+  @media(max-width:820px){
+    .album{min-width:190px}
+    .carousel{gap:24px}
+    h2{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">BLACKPINK</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="integrantes.html">Integrantes</a></li>
+      <li><a class="ativo" href="#">Álbuns</a></li>
+      <li><a href="Merch.html">Merch</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-space"></div>
+
+<div class="carousel-wrapper">
+  <div class="arrow left" id="arrowLeft">&#8249;</div>
+
+  <div class="carousel" id="carousel">
+
+    <div class="album"><img src="https://ygfamily.com/contents/images/2023/06/blackpink-album-squareone.jpg" alt="Square One" onerror="this.onerror=null;this.src='https://i.imgur.com/GMJL5Be.png'"></div>
+    <div class="album"><img src="https://ygfamily.com/contents/images/2023/05/blackpink-album-squaretwo_2.jpg" alt="Square Two" onerror="this.onerror=null;this.src='https://i.imgur.com/GMJL5Be.png'"></div>
+    <div class="album"><img src="https://ygfamily.com/contents/images/2023/04/blackpink-album-squareup.jpg" alt="Square Up" onerror="this.onerror=null;this.src='https://i.imgur.com/GMJL5Be.png'"></div>
+    <div class="album"><img src="https://ygfamily.com/contents/images/2023/04/blackpink-album-killthislove.jpg" alt="Kill This Love" onerror="this.onerror=null;this.src='https://i.imgur.com/GMJL5Be.png'"></div>
+    <div class="album"><img src="https://ygfamily.com/contents/images/2023/04/blackpink-album-howyoulikethat.jpg" alt="The Album" onerror="this.onerror=null;this.src='https://i.imgur.com/GMJL5Be.png'"></div>
+    <div class="album"><img src="https://ygfamily.com/contents/images/2023/04/blackpink-album-bornpink.jpg" alt="Born Pink" onerror="this.onerror=null;this.src='https://i.imgur.com/GMJL5Be.png'"></div>
+    <div class="album"><img src="https://ygfamily.com/contents/images/2025/07/cover%28960x960%29.jpg" alt="JUMP" onerror="this.onerror=null;this.src='https://i.imgur.com/GMJL5Be.png'"></div>
+  </div>
+
+  <div class="arrow right" id="arrowRight">&#8250;</div>
+</div>
+
+<h2 id="albumName">JUMP (2025)</h2>
+<p id="albumDesc">Nova era — conceito futurista.</p>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const albumsData = [
+    {name:"SQUARE ONE (2016)", desc:"Debut com BOOMBAYAH e WHISTLE."},
+    {name:"SQUARE TWO (2016)", desc:"Stay e Playing With Fire."},
+    {name:"SQUARE UP (2018)", desc:"Era DDU-DU DDU-DU."},
+    {name:"KILL THIS LOVE (2019)", desc:"Energia intensa e icônica."},
+    {name:"HOW YOU LIKE THAT (2020)", desc:"Era DDU-DU DDU-DU."},
+    {name:"THE ALBUM (2020)", desc:"Primeiro álbum completo — hits globais."},
+    {name:"BORN PINK (2022)", desc:"Era luxuosa e tour mundial histórica."},
+    {name:"JUMP (2025)", desc:"Nova era — conceito futurista."}
+  ];
+
+  const carousel = document.getElementById('carousel');
+  const items = Array.from(carousel.querySelectorAll('.album'));
+  const left = document.getElementById('arrowLeft');
+  const right = document.getElementById('arrowRight');
+  const nameEl = document.getElementById('albumName');
+  const descEl = document.getElementById('albumDesc');
+
+
+  let index = items.findIndex(it => it.classList.contains('active'));
+  if (index === -1) index = 0;
+
+  function updateText(i){
+    const info = albumsData[i] || {name:'', desc:''};
+    nameEl.textContent = info.name;
+    descEl.textContent = info.desc;
+  }
+
+
+  function scrollToIndex(i){
+    const el = items[i];
+    if (!el) return;
+
+    const elCenter = el.offsetLeft + el.offsetWidth / 2;
+    const containerCenter = carousel.clientWidth / 2;
+
+    const target = elCenter - containerCenter;
+    carousel.scrollTo({ left: target, behavior: 'smooth' });
+  }
+
+  function setActive(i){
+    items.forEach(it => it.classList.remove('active'));
+    items[i].classList.add('active');
+    updateText(i);
+
+    requestAnimationFrame(() => scrollToIndex(i));
+  }
+
+  function move(step){
+    index = (index + step + items.length) % items.length;
+    setActive(index);
+  }
+
+  left.addEventListener('click', () => move(-1));
+  right.addEventListener('click', () => move(1));
+
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') move(-1);
+    if (e.key === 'ArrowRight') move(1);
+  });
+
+
+  window.addEventListener('resize', () => scrollToIndex(index));
+
+
+  setActive(index);
+
+});
+</script>
+
+</body>
+</html>

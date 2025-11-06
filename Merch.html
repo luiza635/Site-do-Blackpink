@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BLACKPINK — Loja / Merch</title>
+<style>
+:root{
+  --bg:#000;
+  --text:#fff;
+  --muted:#bfbfbf;
+  --pink:#ffb6d9;
+  --card-bg: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.04);
+  --shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Poppins, sans-serif;
+  background:#000;
+  color:#fff;
+  padding-top:76px;
+}
+
+/* Header */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 30px;
+  background:rgba(0,0,0,0.85);
+  border-bottom:1px solid #151515;
+  z-index:1100;
+}
+.logo{
+  font-weight:700;font-size:20px;
+  color:var(--pink);
+  border:2px solid var(--pink);
+  padding:5px 10px;
+  border-radius:6px;
+}
+nav ul{
+  display:flex;gap:18px;list-style:none;
+}
+nav a{
+  color:#fff;text-decoration:none;font-weight:600;
+}
+nav a:hover, nav a.ativo{color:var(--pink)}
+
+/* Page top */
+.hero{
+  max-width:1200px;margin:20px auto;padding:20px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.hero h1{color:var(--pink);font-size:28px;margin-bottom:4px;}
+.hero p{color:var(--muted);font-size:14px;}
+
+/* Controls */
+.controls{display:flex;gap:12px;}
+.search, select{
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:8px 12px;border-radius:8px;color:#fff;
+}
+.search input{
+  background:none;border:none;outline:none;color:#fff;
+}
+.btn{
+  background:linear-gradient(180deg,var(--pink),#ff9fcf);
+  color:#000;
+  padding:8px 12px;border-radius:8px;font-weight:700;border:none;
+}
+
+/* Grid */
+.store{max-width:1200px;margin:0 auto;padding:20px;}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:var(--card-bg);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:14px;border-radius:10px;
+  box-shadow:var(--shadow);
+  transition:.2s;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-5px);}
+.img-wrap{border-radius:8px;overflow:hidden;background:var(--glass);}
+.img-wrap img{width:100%;height:260px;object-fit:cover;}
+
+.card h3{margin-top:10px;font-size:17px;}
+.card p{color:var(--muted);font-size:13px;margin-top:6px;flex:1;}
+
+.price{color:var(--pink);font-weight:700;font-size:18px;margin-top:6px;}
+.actions{margin-top:10px;display:flex;gap:10px;}
+.btn-ghost{
+  background:none;border:1px solid rgba(255,255,255,0.12);
+  padding:8px 12px;border-radius:8px;color:#fff;
+}
+
+/* Responsivo */
+@media(max-width:900px){ .grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr;}
+  .hero{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">BLACKPINK</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="integrantes.html">Integrantes</a></li>
+      <li><a href="albuns.html">Álbuns</a></li>
+      <li><a class="ativo" href="Merch.html">Itens</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <h1>Merch Oficial</h1>
+    <p>Escolha seus itens favoritos do BLACKPINK 🖤💖</p>
+  </div>
+  <div class="controls">
+    <div class="search"><input placeholder="Buscar..."></div>
+    <select>
+      <option>Todas</option>
+      <option>Roupas</option>
+      <option>Colecionáveis</option>
+    </select>
+    <button class="btn">Carrinho (0)</button>
+  </div>
+</section>
+
+<section class="store">
+<div class="grid">
+
+<!-- Lightstick -->
+<div class="card">
+  <div class="img-wrap"><img src="https://mapetitecoree.com/cdn/shop/files/LIGHTSTICK-BLACKPINK-OFFICIAL-LIGHT-STICK-Ver2-Ma-Petite-Coree.jpg?v=1747488437"></div>
+  <h3>Lightstick Oficial</h3>
+  <p>Lightstick oficial com luz.</p>
+  <div class="price">R$ 589,00</div>
+  <a href="https://klinestore.com.br/produtos/blackpink-official-lightstick-ver-2/" target="_blank">Ver</a>
+</div>
+
+<!-- Photocards -->
+<div class="card">
+  <div class="img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_678796-MLB88726203128_072025-F.webpg"></div>
+  <h3>Photocards</h3>
+  <p>Pack com cards das integrantes.</p>
+  <div class="price">R$ 49,90</div>
+  <a href="https://http2.mlstatic.com/D_NQ_NP_2X_678796-MLB88726203128_072025-F.webp" target="_blank">Ver</a>
+</div>
+
+<!-- Pelúcias -->
+<div class="card">
+  <div class="img-wrap"><img src="https://ae01.alicdn.com/kf/S35dd450288f640cfa72f50ca886041295.jpg"></div>
+  <h3>Pelúcias</h3>
+  <p>Pelúcias fofinhas.</p>
+  <div class="price">R$ 46,37</div>
+  <a href="https://pt.aliexpress.com/item/1005005910168574.html?spm=a2g0o.productlist.main.4.4784ffKHffKHUN&algo_pvid=813109a1-493d-4659-81b9-d630c6ba7e10&algo_exp_id=813109a1-493d-4659-81b9-d630c6ba7e10-3&pdp_ext_f=%7B%22order%22%3A%22228%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21BRL%2170.61%2146.37%21%21%2186.22%2156.62%21%402101d49617623782837271554ed40e%2112000034806569890%21sea%21BR%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Ae3512d17%3Bm03_new_user%3A-29895%3BpisId%3A5000000190285872&curPageLogUid=RZSAAd9o38UT&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005910168574%7C_p_origin_prod%3A" target="_blank">Ver</a>
+</div>
+
+<!-- Funko Pop -->
+<div class="card">
+  <div class="img-wrap"><img src="https://m.media-amazon.com/images/I/716rxp+NQ8L._AC_SX569_.jpg"></div>
+  <h3>Funko Pop</h3>
+  <p>Miniaturas das integrantes.</p>
+  <div class="price">R$1.149,00</div>
+  <a href="https://www.amazon.com.br/Funko-POP-Moments-Deluxe-colecion%C3%A1veis/dp/B0BXXDQFFH/ref=sr_1_8?dib=eyJ2IjoiMSJ9.6PjE9JBCp81ZttX5suAHJQvXDQJEr0ELWCxrJv6ns3Ks4muwUTlM85SAG4WCaROzqif_Pb_qvcStnkEqWb-9LO1PFV5n-99LuEv9W25EicL2zgDMKcQU5Y-OTPvr4d31pi6wRRSqZIra-6imFpWi_rsE0YDRbLBsB1aveQ_twnJ1g-MdebuuVcscB5iSwJgVDlJ6kzvtWVliw6XasWxkZxt5y67K5864YIOLmFkpaNsQLdCHCYTGR4StuKrvOBbS37xCH2XzUjUtLoy2r9LgMoxy8DBhchDhjpJTQaQ8-AU.qiWp1EsWWWZ649ooG6i1TAORiVzV3YKnZ7A5HExidUo&dib_tag=se&keywords=funko+pop+blackpink&qid=1762379205&sr=8-8&ufe=app_do%3Aamzn1.fos.95de73c3-5dda-43a7-bd1f-63af03b14751&utm_source=chatgpt.com" target="_blank">Ver</a>
+</div>
+
+<!-- Álbuns -->
+<div class="card">
+  <div class="img-wrap"><img src="https://i.pinimg.com/736x/b5/b5/42/b5b542e28cf40100066be57a4b8d9d2d.jpg"></div>
+  <h3>Álbuns</h3>
+  <p>Álbuns oficiais.</p>
+  <div class="price">R$ 299,00</div>
+  <a href="https://shopee.com.br/search?keyword=%C3%A1lbum%20blackpink" target="_blank">Ver</a>
+</div>
+
+<!-- Camisetas -->
+<div class="card">
+  <div class="img-wrap"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7ra23-m5anrgoaly9s18.webp"></div>
+  <h3>Moletom</h3>
+  <p>Estampas oficiais.</p>
+  <div class="price">R$ 55,90</div>
+  <a href=https://shopee.com.br/Moletom-Canguru-Bornpink-Blackpink-i.1280745312.23698155254?extraParams=%7B%22display_model_id%22%3A238778819609%2C%22model_selection_logic%22%3A3%7D&sp_atk=338fc894-0f09-4f1e-88fa-f52ddb0ed3f4&xptdk=338fc894-0f09-4f1e-88fa-f52ddb0ed3f4" target="_blank">Ver</a>
+</div>
+
+<!-- Bonés -->
+<div class="card">
+  <div class="img-wrap"><img src="https://eu.blackpinkofficial.store/cdn/shop/files/BucketHatBlack_2.png?v=1753912915&width=823"></div>
+  <h3>Chapéu Bucket </h3>
+  <p>Modelo tour.</p>
+  <div class="price">€50,00 EUR</div>
+  <a href="https://eu.blackpinkofficial.store/products/blackpink-bucket-hat-black" target="_blank">Ver</a>
+</div>
+
+<!-- Pôsteres -->
+<div class="card">
+  <div class="https://cdn-images.dzcdn.net/images/cover/05fd38d4fa7616858cc097acd7d648aa/500x500.jpg"></div>
+  <h3>Pôsteres</h3>
+  <p>Pôsteres oficiais.</p>
+  <div class="price">€50,00 EUR</div>
+  <a href="https://www.mercadolivre.com.br/poster-60x90cm-blackpink--kpop-2/up/MLBU1421653392#polycard_client=search-nordic&search_layout=stack&position=25&type=product&tracking_id=312f8fed-5c62-480c-8fb0-7c7f361976d3&wid=MLB1845931712&sid=search" target="_blank">Ver</a>
+</div>
