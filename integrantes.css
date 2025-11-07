@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  padding-top: 70px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid pink;
+  padding: 5px 10px;
+  color: pink;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.ativo {
+  color: pink;
+}
+
+
+.integrantes-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.integrantes-container h1 {
+  color: pink;
+  margin-bottom: 40px;
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+
+.membro-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.membro-card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.2);
+  transition: transform 0.3s;
+}
+
+.membro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(255, 192, 203, 0.5);
+}
+
+.membro-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 3px solid pink;
+}
+
+.membro-card h2 {
+  color: pink;
+  margin-bottom: 5px;
+  font-size: 1.8em;
+}
+
+.membro-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+.membro-card .posicao {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.membro-card .descricao {
+  font-size: 13px;
+  color: #fff;
+  margin-top: 15px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+}
+
+footer a {
+  color: pink;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer a img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 10px;
+  }
+
+  nav ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .integrantes-container h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  .membro-card {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 30px 10px;
+  }
+}
+.cursor {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-image: url(cursor.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  filter: drop-shadow(0 0 10px #ff8ec7); 
+  transition: transform 0.08s linear;
+}
