@@ -141,17 +141,3 @@ footer a img {
 body {
   cursor: none; 
 }
-
-.cursor {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  background-image: url(cursor.png); 
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none; 
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  filter: drop-shadow(0 0 10px #ff8ec7);
-  transition: transform 0.08s linear;
-}
