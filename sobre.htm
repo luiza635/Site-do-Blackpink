@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BLACKPINK - Sobre o Grupo</title>
 
+  <link rel="stylesheet" href="sobre.css">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- ÍCONES -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         <li><a href="integrantes.html">Integrantes</a></li>
         <li><a href="albuns.html">Álbuns</a></li>
         <li><a href="merch.html">Merch</a></li>
-        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
       </ul>
     </nav>
   </header>
@@ -33,56 +35,50 @@
     <p>
       O BLACKPINK (블랙핑크) é um <em>girl group</em> sul-coreano formado pela 
       <strong>YG Entertainment</strong>, composto pelas talentosas integrantes 
-      <strong>Jisoo, Jennie, Rosé e Lisa</strong>. O nome do grupo simboliza a dualidade: 
-      <strong>"Black"</strong> representa o lado mais forte e <em>girl crush</em>, enquanto 
-      <strong>"Pink"</strong> representa a beleza e feminilidade.
+      <strong>Jisoo, Jennie, Rosé e Lisa</strong>.
     </p>
 
     <p>
       Desde sua estreia em <strong>agosto de 2016</strong> com o álbum <em>Square One</em>, 
-      incluindo os sucessos "Whistle" e "BOOMBAYAH", o grupo rapidamente se tornou um dos 
-      maiores atos de K-Pop do mundo. Elas são conhecidas por quebrar recordes e sua 
-      presença de palco cativante.
+      o grupo rapidamente se tornou um dos maiores atos de K-Pop do mundo.
     </p>
 
     <h2>Impacto e Conquistas</h2>
     <p>
-      O BLACKPINK não é apenas um grupo musical, mas um fenômeno cultural. Elas foram o 
-      primeiro grupo feminino de K-Pop a se apresentar no festival <strong>Coachella</strong> 
-      e detêm vários recordes no YouTube. Além da música, os membros são embaixadores 
-      globais de grandes marcas de luxo.
+      O BLACKPINK foi o primeiro grupo feminino de K-Pop a se apresentar no 
+      <strong>Coachella</strong> e detém vários recordes no YouTube.
     </p>
 
     <p>
-      Com uma base de fãs dedicada, conhecidos como <strong>BLINKS</strong>, o grupo continua 
-      a expandir sua influência globalmente através de turnês mundiais esgotadas e 
-      colaborações com artistas internacionais.
+      Com uma base de fãs chamada <strong>BLINKS</strong>, o grupo continua a expandir
+      sua influência globalmente.
     </p>
   </main>
 
-  <footer>
-    <a href="https://www.instagram.com/blackpinkofficial/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"> 
-      @blackpinkofficial
+  <!-- FOOTER SOMENTE COM ÍCONES (SEM FUNDO) -->
+  <footer class="social-footer">
+
+    <a href="https://www.facebook.com/BLACKPINKOFFICIAL" target="_blank">
+      <i class="fab fa-facebook-f"></i>
     </a>
+
+    <a href="https://www.instagram.com/blackpinkofficial/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@BLACKPINK" target="_blank">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@bp_tiktok" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+
+    <a href="https://x.com/BLACKPINK" target="_blank">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+
   </footer>
-
-
-  <div class="cursor" id="cursor"></div>
-
-  <script>
-    const cursor = document.getElementById('cursor');
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-
-    
-    document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
-    document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
-  </script>
-
 
 </body>
 </html>

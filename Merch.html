@@ -1,148 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BLACKPINK — Loja / Merch</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merch</title>
+
   <link rel="stylesheet" href="merch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">BLACKPINK</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="sobre.html" class="ativo">Sobre</a></li>
-      <li><a href="integrantes.html">Integrantes</a></li>
-      <li><a href="albuns.html">Álbuns</a></li>
-      <li><a href="merch.html">Merch</a></li>
-      <li><a href="Galeria.html">Galeria</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <div class="logo">BLACKPINK</div>
 
-<main>
-<section class="hero">
-  <div>
-    <h1>Merch</h1>
-  </div>
-  <div class="controls">
-    <div class="search"><input placeholder="Buscar..."></div>
-    <select>
-      <option>Todas</option>
-      <option>Roupas</option>
-      <option>Colecionáveis</option>
-    </select>
-    <button class="btn">Carrinho (0)</button>
-  </div>
-</section>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="albuns.html">Álbuns</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="store">
-<div class="grid">
+  <!-- GRID DE PRODUTOS -->
+  <section class="produtos-container">
+    <div class="grid">
 
-<!-- Lightstick -->
-<div class="card">
-  <div class="img-wrap"><img src="https://mapetitecoree.com/cdn/shop/files/LIGHTSTICK-BLACKPINK-OFFICIAL-LIGHT-STICK-Ver2-Ma-Petite-Coree.jpg?v=1747488437"></div>
-  <h3>Lightstick Oficial</h3>
-  <p>Lightstick oficial com luz.</p>
-  <div class="price">R$ 589,00</div>
-  <a href="https://klinestore.com.br/produtos/blackpink-official-lightstick-ver-2/" target="_blank" class="btn-ghost">Ver</a>
-</div>
+      <!-- PRODUTO 1 -->
+      <a href="https://google.com" class="produto">
+        <div class="img"></div>
+        <p class="nome">Produto 1</p>
+        <p class="preco">R$ 99,90</p>
+      </a>
 
-<!-- Photocards -->
-<div class="card">
-  <div class="img-wrap"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_678796-MLB88726203128_072025-F.webp"></div>
-  <h3>Photocards</h3>
-  <p>Pack com cards das integrantes.</p>
-  <div class="price">R$ 49,90</div>
-  <a href="https://http2.mlstatic.com/D_NQ_NP_2X_678796-MLB88726203128_072025-F.webp" target="_blank" class="btn-ghost">Ver</a>
-</div>
+      <!-- PRODUTO 2 -->
+      <a href="https://google.com" class="produto">
+        <div class="img"></div>
+        <p class="nome">Produto 2</p>
+        <p class="preco">R$ 89,90</p>
+      </a>
 
-<!-- Pelúcias -->
-<div class="card">
-  <div class="img-wrap"><img src="https://ae01.alicdn.com/kf/S35dd450288f640cfa72f50ca886041295.jpg"></div>
-  <h3>Pelúcias</h3>
-  <p>Pelúcias fofinhas.</p>
-  <div class="price">R$ 46,37</div>
-  <a href="https://pt.aliexpress.com/item/1005005910168574.html" target="_blank" class="btn-ghost">Ver</a>
-</div>
+      <!-- PRODUTO 3 -->
+      <a href="https://google.com" class="produto">
+        <div class="img"></div>
+        <p class="nome">Produto 3</p>
+        <p class="preco">R$ 79,90</p>
+      </a>
 
-<!-- Funko Pop -->
-<div class="card">
-  <div class="img-wrap"><img src="https://m.media-amazon.com/images/I/716rxp+NQ8L._AC_SX569_.jpg"></div>
-  <h3>Funko Pop</h3>
-  <p>Miniaturas das integrantes.</p>
-  <div class="price">R$ 1.149,00</div>
-  <a href="https://www.amazon.com.br/Funko-POP-Moments-Deluxe-colecion%C3%A1veis/dp/B0BXXDQFFH" target="_blank" class="btn-ghost">Ver</a>
-</div>
+      <!-- PRODUTO 4 -->
+      <a href="https://google.com" class="produto">
+        <div class="img"></div>
+        <p class="nome">Produto 4</p>
+        <p class="preco">R$ 119,90</p>
+      </a>
 
-<!-- Álbuns -->
-<div class="card">
-  <div class="img-wrap"><img src="https://i.pinimg.com/736x/b5/b5/42/b5b542e28cf40100066be57a4b8d9d2d.jpg"></div>
-  <h3>Álbuns</h3>
-  <p>Álbuns oficiais.</p>
-  <div class="price">R$ 299,00</div>
-  <a href="https://shopee.com.br/search?keyword=%C3%A1lbum%20blackpink" target="_blank" class="btn-ghost">Ver</a>
-</div>
+      <!-- FILEIRA 2 -->
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 5</p><p class="preco">R$ 99,90</p></a>
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 6</p><p class="preco">R$ 89,90</p></a>
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 7</p><p class="preco">R$ 79,90</p></a>
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 8</p><p class="preco">R$ 119,90</p></a>
 
-<!-- Moletom -->
-<div class="card">
-  <div class="img-wrap"><img src="https://down-br.img.susercontent.com/file/sg-11134201-7ra23-m5anrgoaly9s18.webp"></div>
-  <h3>Moletom</h3>
-  <p>Estampas oficiais.</p>
-  <div class="price">R$ 55,90</div>
-  <a href="https://shopee.com.br/Moletom-Canguru-Bornpink-Blackpink-i.1280745312.23698155254" target="_blank" class="btn-ghost">Ver</a>
-</div>
+      <!-- FILEIRA 3 -->
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 9</p><p class="preco">R$ 99,90</p></a>
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 10</p><p class="preco">R$ 89,90</p></a>
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 11</p><p class="preco">R$ 79,90</p></a>
+      <a href="#" class="produto"><div class="img"></div><p class="nome">Produto 12</p><p class="preco">R$ 119,90</p></a>
 
-<!-- Chapéu Bucket -->
-<div class="card">
-  <div class="img-wrap"><img src="https://eu.blackpinkofficial.store/cdn/shop/files/BucketHatBlack_2.png?v=1753912915&width=823"></div>
-  <h3>Chapéu Bucket</h3>
-  <p>Modelo tour.</p>
-  <div class="price">€50,00 EUR</div>
-  <a href="https://eu.blackpinkofficial.store/products/blackpink-bucket-hat-black" target="_blank" class="btn-ghost">Ver</a>
-</div>
+    </div>
+  </section>
 
-<!-- Pôster -->
-<div class="card">
-  <div class="img-wrap"><img src="https://eu.blackpinkofficial.store/cdn/shop/files/BLACKPINKExclusivePoster_Barcelona.png?v=1753892996&width=360"></div>
-  <h3>Pôsteres</h3>
-  <p>Pôsteres oficiais.</p>
-  <div class="price">€50,00 EUR</div>
-  <a href="https://eu.blackpinkofficial.store/collections/posters" target="_blank" class="btn-ghost">Ver</a>
-</div>
-
-<!-- Site oficial -->
-<div class="card">
-  <div class="img-wrap"><img src="https://i.pinimg.com/736x/ee/1e/86/ee1e8601dd5ddbd87acddf36b7b6e850.jpg"></div>
-  <h3>BLACKPINK OFFICIAL STORY</h3>
-  <p>Produtos  oficiais do grupo BLACKPINK.</p>
-  <div class="price"></div>
-  <a href="https://eu.blackpinkofficial.store/" target="_blank" class="btn-ghost">Ver</a>
-</div>
-
-</div>
-</section>
-</main>
-
-
-  <div class="cursor" id="cursor"></div>
-
-  <script>
-    const cursor = document.getElementById('cursor');
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-
-
-    document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
-    document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
-  </script>
-
+  <!-- FOOTER -->
+  <footer class="social-footer">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+  </footer>
 
 </body>
 </html>

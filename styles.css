@@ -8,10 +8,9 @@ body {
   font-family: Arial, sans-serif;
   background: black;
   color: white;
-  cursor: none; 
 }
 
-
+/* ===== HEADER ===== */
 header {
   display: flex; 
   justify-content: space-between;
@@ -21,7 +20,7 @@ header {
   position: fixed; 
   width: 100%;
   top: 0;
-  border-bottom: 1px solid #000000; 
+  border-bottom: 1px solid #000; 
   z-index: 10;
 }
 
@@ -49,42 +48,30 @@ nav a:hover {
   color: pink; 
 }
 
-
+/* ===== IMAGEM GRANDE ===== */
 .hero {
-  height: 100vh; 
-  background: url('https://4kwallpapers.com/images/walls/thumbs_3t/19348.jpg') right 0%/cover no-repeat;
+  min-height: 200vh; /* imagem continua ao descer */
+  background: url("img/image.png") center center / cover no-repeat;
+  padding-top: 90px;
+}
+
+/* ===== FOOTER SEM FUNDO ===== */
+.social-footer {
+  background: transparent;   /* ✅ SEM PRETO */
+  padding: 20px 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: 70px; 
+  gap: 22px;
 }
 
-
-footer {
-  background: #000000;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  border-top: 1px solid #000000;
-}
-
-footer a {
+.social-footer a {
   color: pink;
-  text-decoration: none;
-  font-weight: bold;
+  font-size: 22px;
   transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  text-decoration: none;
 }
 
-footer a:hover {
+.social-footer a:hover {
   color: white;
-}
-
-footer a img {
-  width: 20px;
-  height: 20px;
+  transform: translateY(-4px);
 }
