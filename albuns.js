@@ -5,50 +5,17 @@ const next = document.getElementById("next");
 const albumName = document.getElementById("albumName");
 
 const albumsData = [
-  {
-    name: "SQUARE ONE (2016)",
-    link: "https://www.youtube.com/watch?v=bwmSjveL3Lc" // BOOMBAYAH (OFICIAL)
-  },
-  {
-    name: "SQUARE TWO (2016)",
-    link: "https://www.youtube.com/watch?v=9pdj4iJD08s" // PLAYING WITH FIRE (OFICIAL)
-  },
-  {
-    name: "AS IF IT'S YOUR LAST (2017)",
-    link: "https://www.youtube.com/watch?v=Amq-qlqbjYA" // AS IF IT'S YOUR LAST (OFICIAL)
-  },
-  {
-    name: "SQUARE UP (2018)",
-    link: "https://www.youtube.com/watch?v=IHNzOHi8sJs" // DDU-DU DDU-DU (OFICIAL)
-  },
-  {
-    name: "KILL THIS LOVE (2019)",
-    link: "https://www.youtube.com/watch?v=2S24-y0Ij3Y" // KILL THIS LOVE (OFICIAL)
-  },
-  {
-    name: "HOW YOU LIKE THAT (2020)",
-    link: "https://www.youtube.com/watch?v=ioNng23DkIM" // HOW YOU LIKE THAT (OFICIAL)
-  },
-  {
-    name: "ICE CREAM (2020)",
-    link: "https://www.youtube.com/watch?v=vRXZj0DzXIA" // ICE CREAM ft. Selena (OFICIAL)
-  },
-  {
-    name: "THE ALBUM (2020)",
-    link: "https://www.youtube.com/watch?v=dyRsYk0LyA8" // LOVESICK GIRLS (OFICIAL)
-  },
-  {
-    name: "Pink Venom (2022)",
-    link: "https://www.youtube.com/watch?v=gQlMMD8auMs" // PINK VENOM (OFICIAL)
-  },
-  {
-    name: "BORN PINK (2022)",
-    link: "https://www.youtube.com/watch?v=POe9SOEKotk" // SHUT DOWN (OFICIAL)
-  },
-  {
-    name: "JUMP (2025)",
-    link: null // ❌ Ainda não existe MV oficial
-  }
+  { name: "SQUARE ONE (2016)", link: "https://www.youtube.com/watch?v=bwmSjveL3Lc" },
+  { name: "SQUARE TWO (2016)", link: "https://www.youtube.com/watch?v=9pdj4iJD08s" },
+  { name: "AS IF IT'S YOUR LAST (2017)", link: "https://www.youtube.com/watch?v=Amq-qlqbjYA" },
+  { name: "SQUARE UP (2018)", link: "https://www.youtube.com/watch?v=IHNzOHi8sJs" },
+  { name: "KILL THIS LOVE (2019)", link: "https://www.youtube.com/watch?v=2S24-y0Ij3Y" },
+  { name: "HOW YOU LIKE THAT (2020)", link: "https://www.youtube.com/watch?v=ioNng23DkIM" },
+  { name: "ICE CREAM (2020)", link: "https://www.youtube.com/watch?v=vRXZj0DzXIA" },
+  { name: "THE ALBUM (2020)", link: "https://www.youtube.com/watch?v=dyRsYk0LyA8" },
+  { name: "Pink Venom (2022)", link: "https://www.youtube.com/watch?v=gQlMMD8auMs" },
+  { name: "BORN PINK (2022)", link: "https://www.youtube.com/watch?v=POe9SOEKotk" },
+  { name: "JUMP (2025)", link: null }
 ];
 
 let index = 0;
@@ -77,7 +44,6 @@ prev.addEventListener("click", () => {
   updateCarousel();
 });
 
-// ✅ CLICOU → CENTRALIZA E ABRE O MV OFICIAL
 albums.forEach((alb, i) => {
   alb.addEventListener("click", () => {
     index = i;
@@ -88,7 +54,7 @@ albums.forEach((alb, i) => {
     if (link) {
       window.open(link, "_blank");
     } else {
-      alert("Este álbum ainda não possui MV oficial.");
+      alert("Esse álbum ainda não tem MV oficial.");
     }
   });
 });

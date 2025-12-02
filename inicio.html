@@ -6,12 +6,31 @@
   <title>BLACKPINK</title>
 
   <link rel="stylesheet" href="styles.css">
-
-  <!-- ÍCONES -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+<!-- MINI BOLHA + CHAT -->
+<div id="chatMini" class="chat-mini" aria-label="Abrir chat BLINK">
+  <span class="chat-icon">💬</span>
+  <span class="chat-text">BLINKs, Chat with us</span>
+</div>
+
+<div id="chatBox" class="chat-box" role="dialog" aria-hidden="true">
+  <div class="chat-header">
+    <div>BLINK Chat 🎀</div>
+    <button id="chatClose" class="close-btn" aria-label="Fechar chat">✖</button>
+  </div>
+
+  <div id="chatMessages" class="chat-body">
+    <div class="msg blinkMsg">Bem-vinda, BLINK! 💗✨</div>
+  </div>
+
+  <div class="chat-input">
+    <input id="chatInput" type="text" placeholder="Escreva algo fofo..." />
+    <button id="chatSend">Enviar</button>
+  </div>
+</div>
 
   <header>
     <div class="logo">BLACKPINK</div>
@@ -28,10 +47,8 @@
     </nav>
   </header>
 
-  <!-- IMAGEM GRANDE -->
   <section class="hero"></section>
 
-  <!-- FOOTER SOMENTE COM ÍCONES (SEM FUNDO) -->
   <footer class="social-footer">
 
     <a href="https://www.facebook.com/BLACKPINKOFFICIAL" target="_blank">
@@ -56,5 +73,28 @@
 
   </footer>
 
+<div class="chat-mini" id="chatMini" onclick="toggleChat()">
+    <span class="chat-icon">💬</span>
+    <span class="chat-text">BLINKs, Chat with us</span>
+</div>
+
+<div class="chat-box" id="chatBox">
+    <div class="chat-header">
+        BLINK Chat 🎀
+        <button class="close-btn" onclick="toggleChat()">✖</button>
+    </div>
+
+    <div class="chat-body">
+        <p>Bem-vinda Blink! 💗✨ Converse com outras fãs aqui!</p>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" placeholder="Escreva algo fofo... ✨">
+        <button>Enviar</button>
+    </div>
+</div>
+
+
+  
 </body>
 </html>
