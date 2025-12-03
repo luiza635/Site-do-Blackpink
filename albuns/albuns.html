@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BLACKPINK — Discografia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="albuns.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BLACKPINK</div>
+    <nav>
+      <ul>
+        <li><a href="../inicio/inicio.html">Início</a></li>
+        <li><a href="../sobre/sobre.html">Sobre</a></li>
+        <li><a href="../integrantes/integrantes.html">Integrantes</a></li>
+        <li><a href="./albuns.html" class="ativo">Álbuns</a></li>
+        <li><a href="../merch/merch.html">Merch</a></li>
+        <li><a href="../galeria/galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="carousel-wrapper">
+
+    <button class="arrow left" id="prev">&#10094;</button>
+
+    <div class="carousel-container">
+      <div class="carousel-track" id="track">
+
+        <!-- SQUARE ONE -->
+        <div class="album" data-name="SQUARE ONE (2016)">
+          <img src="../albuns/blackpink-album-squareone.jpg" alt="SQUARE ONE">
+        </div>
+
+        <!-- SQUARE TWO -->
+        <div class="album" data-name="SQUARE TWO (2016)">
+          <img src="../albuns/blackpink-album-squaretwo_2.jpg" alt="SQUARE TWO">
+        </div>
+
+        <!-- AS IF IT'S YOUR LAST -->
+        <div class="album" data-name="AS IF IT'S YOUR LAST (2017)">
+          <img src="../albuns/blackpink-album-asifitsyourlast.jpg" alt="AS IF IT'S YOUR LAST">
+        </div>
+
+        <!-- SQUARE UP -->
+        <div class="album" data-name="SQUARE UP (2018)">
+          <img src="blackpink-album-squareup.jpg" alt="SQUARE UP">
+        </div>
+
+        <!-- KILL THIS LOVE -->
+        <div class="album" data-name="KILL THIS LOVE (2019)">
+          <img src="blackpink-album-killthislove.jpg" alt="KILL THIS LOVE">
+        </div>
+
+        <!-- HOW YOU LIKE THAT -->
+        <div class="album" data-name="HOW YOU LIKE THAT (2020)">
+          <img src="blackpink-album-howyoulikethat.jpg" alt="HOW YOU LIKE THAT">
+        </div>
+
+        <!-- ICE CREAM -->
+        <div class="album" data-name="ICE CREAM (2020)">
+          <img src="blackpink-album-icecream.jpg" alt="ICE CREAM">
+        </div>
+
+        <!-- THE ALBUM -->
+        <div class="album" data-name="THE ALBUM (2020)">
+          <img src="blackpink-album-thealbum.jpg" alt="THE ALBUM">
+        </div>
+
+        <!-- PINK VENOM -->
+        <div class="album" data-name="Pink Venom (2022)">
+          <img src="blackpink-album-pinkvenom.jpg" alt="Pink Venom">
+        </div>
+
+        <!-- BORN PINK -->
+        <div class="album" data-name="BORN PINK (2022)">
+          <img src="blackpink-album-bornpink.jpg" alt="BORN PINK">
+        </div>
+
+        <!-- JUMP -->
+        <div class="album" data-name="JUMP (2025)">
+          <img src="cover(960x960).jpg" alt="JUMP">
+        </div>
+
+      </div>
+    </div>
+
+    <button class="arrow right" id="next">&#10095;</button>
+
+  </div>
+
+  <h2 id="albumName">SQUARE ONE (2016)</h2>
+  <p id="albumDesc">Discografia completa da BLACKPINK</p>
+
+  <!-- Fallback automático para imagens que não carregam -->
+  <script>
+    (function () {
+      const alternatives = [
+        (p) => p,                // usa o caminho atual
+        (p) => p.replace(/^\.?\/?img\//, '../img/'), // img/ -> ../img/
+        (p) => p.replace(/^\.?\/?\.{0,2}\/?img\//, './img/'), // qualquer img/ -> ./img/
+        (p) => p.replace(/^\.?\/?/, '../'), // tenta prefixar ../
+        (p) => p.replace(/^\.?\/?/, './')   // tenta prefixar ./
+      ];
+
+      document.querySelectorAll('.album img').forEach(img => {
+        // guarda caminhos já testados para evitar loop infinito
+        const tried = new Set();
+        img.addEventListener('error', function onErr() {
+          let original = img.getAttribute('data-original-src') || img.src;
+          if (!img.getAttribute('data-original-src')) img.setAttribute('data-original-src', original);
+
+          // encontra próximo caminho alternativo ainda não testado
+          let next = null;
+          for (const fn of alternatives) {
+            const candidate = fn(original);
+            if (!tried.has(candidate)) {
+              tried.add(candidate);
+              next = candidate;
+              break;
+            }
+          }
+
+          if (next) {
+            // evita disparar novamente para o mesmo src
+            if (img.src === next) {
+              // nenhum candidato novo válido — remove listener
+              img.removeEventListener('error', onErr);
+              console.warn('Imagem não encontrada:', original);
+            } else {
+              img.src = next;
+            }
+          } else {
+            img.removeEventListener('error', onErr);
+            console.warn('Imagem não encontrada após tentativas:', original);
+          }
+        });
+
+        // força rechecagem caso já tenha falhado antes (cache)
+        // tenta recarregar para disparar error se a atual estiver inválida
+        setTimeout(() => {
+          if (!img.complete || img.naturalWidth === 0) {
+            // reatribui src para forçar evento error se inválido
+            const s = img.getAttribute('data-original-src') || img.src;
+            img.src = s;
+          }
+        }, 50);
+      });
+    })();
+  </script>
+
+  <script src="albuns.js"></script>
+</body>
+
+</html>

@@ -124,6 +124,93 @@ nav a.ativo {
   line-height: 1.5;
 }
 
+/* container geral que deixa as integrantes lado a lado */
+/*/ Deixa tudo organizado em colunas lado a lado /*/
+.integrantes-container {
+  display: flex;  
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* permite quebra em telas pequenas */
+}
+
+/* card individual */
+.membro-card {
+  width: 250px;
+  background: #111;
+  border: 2px solid #ffb6c9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  transition: 0.3s;
+}
+
+/*/ efeito suave sem brilho pra não cansar a vista /*/
+.membro-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff9bb8;
+}
+
+.membro-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* nome */
+.membro-card h2 {
+  color: #ffb6c9;
+  margin-bottom: 10px;
+}
+
+/* papel principal */
+.posicao {
+  font-weight: bold;
+  color: #ff9bb8;
+  margin-bottom: 10px;
+}
+
+/* descrição */
+.descricao {
+  color: #d8d8d8;
+  margin-bottom: 15px;
+}
+
+/* botão GALERIA */
+.botao-galeria {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #ffb6c9;
+  color: #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/*/ hover suave /*/
+.botao-galeria:hover {
+  background: #ff9bb8;
+  transform: translateY(-3px);
+}
+
+/* responsividade */
+@media (max-width: 900px) {
+  .membro-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .membro-card {
+    width: 100%;
+  }
+}
+
+
+
 /* FOOTER */
 .social-footer {
   background: transparent;
