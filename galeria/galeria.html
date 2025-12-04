@@ -2,205 +2,106 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - BLACKPINK</title>
+  <meta charset="UTF-8">
+  <title>Galeria - BLACKPINK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="galeria.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="galeria.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR (exatamente igual ao seu site) -->
-    <header>
-        <div class="logo">BLACKPINK</div>
-        <nav>
-            <ul>
-                <li><a href="inicio.html">Início</a></li>
-                <li><a href="sobre.htm">Sobre</a></li>
-                <li><a href="integrantes.html">Integrantes</a></li>
-                <li><a href="albuns.html">Álbuns</a></li>
-                <li><a href="merch.html">Merch</a></li>
-                <li><a href="galeria.html" class="ativo">Galeria</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <div class="logo">BLACKPINK</div>
+  <nav>
+    <ul>
+      <li><a href="../inicio/inicio.html">Início</a></li>
+      <li><a href="../sobre/sobre.html">Sobre</a></li>
+      <li><a href="../integrantes/integrantes.html">Integrantes</a></li>
+      <li><a href="../albuns/albuns.html">Álbuns</a></li>
+      <li><a href="../merch/merch.html">Merch</a></li>
+      <li><a href="./galeria.html" class="ativo">Galeria</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <main class="galeria-container">
-        <h1 id="titulo-galeria">GALERIA</h1>
+<main class="galeria-container">
 
-        <!-- GRID DE FOTOS -->
-        <div id="galeria-grid" class="grid-fotos"></div>
+  <h1 id="titulo-galeria">GALERIA</h1>
 
-        <!-- SETAS DE TROCA DE INTEGRANTE -->
-        <div class="paginacao">
-            <a id="prev-btn" class="seta"><i class="fa-solid fa-chevron-left"></i></a>
-            <span id="contador"></span>
-            <a id="next-btn" class="seta"><i class="fa-solid fa-chevron-right"></i></a>
-        </div>
+  <div id="galeria-grid" class="grid-fotos"></div>
 
-    </main>
+  <div class="paginacao">
+    <a id="prev-btn" class="seta"><i class="fa-solid fa-chevron-left"></i></a>
+    <span id="contador"></span>
+    <a id="next-btn" class="seta"><i class="fa-solid fa-chevron-right"></i></a>
+  </div>
 
-    <!-- RODAPÉ -->
-    <footer class="social-footer">
-        <a href="https://www.facebook.com/BLACKPINKOFFICIAL" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
+</main>
 
-        <a href="https://www.instagram.com/blackpinkofficial/" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
+<footer class="social-footer">
+  <a href="https://www.facebook.com/BLACKPINKOFFICIAL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/blackpinkofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@BLACKPINK" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://www.tiktok.com/@bp_tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://x.com/BLACKPINK" target="_blank"><i class="fab fa-x-twitter"></i></a>
+</footer>
 
-        <a href="https://www.youtube.com/@BLACKPINK" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
+<script>
+const integrantes = ["blackpink", "jisoo", "jennie", "rose", "lisa"];
+let atual = "blackpink";
 
-        <a href="https://www.tiktok.com/@bp_tiktok" target="_blank">
-            <i class="fab fa-tiktok"></i>
-        </a>
+const galerias = {
+  blackpink: [
+    'blackpink-capa.jpg',
+    'pink-venom.jpg',
+    'imagem.jpg',
+    'imagem-show.jpg',
+    'show.jpg',
+    'born-pink.jpg'
+  ],
 
-        <a href="https://x.com/BLACKPINK" target="_blank">
-            <i class="fab fa-x-twitter"></i>
-        </a>
-    </footer>
+  jisoo: ['jisoo1.jpg','jisoo2.jpg','jisoo3.jpg','jisoo4.jpg','jisoo5.jpg','jisoo6.jpg'],
+  jennie: ['jennie1.jpg','jennie2.jpg','jennie3.jpg','jennie4.jpg','jennie5.jpg','jennie6.jpg'],
+  rose:   ['rose1.jpg','rose2.jpg','rose3.jpg','rose4.jpg','rose5.jpg','rose6.jpg'],
+  lisa:   ['lisa1.jpg','lisa2.jpg','lisa3.jpg','lisa4.jpg','lisa5.jpg','lisa6.jpg']
+};
 
-    <!-- script novo: detecta imagens por padrão de nomes (ex.: jisoo1.jpg, jisoo2.png ou URLs completas) -->
-    <script>
-        const integrantes = ["jisoo", "jennie", "rose", "lisa"];
-        const MIN_IMAGES = 3; // mostra pelo menos 3 imagens
+function carregarGaleria() {
+  const grid = document.getElementById("galeria-grid");
+  const titulo = document.getElementById("titulo-galeria");
+  const contador = document.getElementById("contador");
 
-        function resolveSrc(s) {
-            if (!s) return s;
-            s = String(s).trim();
-            if (s.startsWith('http://') || s.startsWith('https://') || s.startsWith('//')) return s;
-            if (s.startsWith('/') || s.startsWith('./') || s.startsWith('../')) return s;
-            return './' + s;
-        }
+  grid.innerHTML = "";
+  titulo.innerText = "GALERIA — " + atual.toUpperCase();
+  contador.innerText = (integrantes.indexOf(atual) + 1) + "/" + integrantes.length;
 
-        function testImage(url, timeout = 5000) {
-            return new Promise(resolve => {
-                const img = new Image();
-                let done = false;
-                const clean = (ok) => { if (done) return; done = true; img.onload = img.onerror = null; resolve(ok); };
-                img.onload = () => clean(true);
-                img.onerror = () => clean(false);
-                img.src = url;
-                setTimeout(() => clean(false), timeout);
-            });
-        }
+  galerias[atual].forEach(nome => {
+    const img = document.createElement("img");
+    img.src = nome;
+    img.alt = "Foto de " + atual;
+    img.loading = "lazy";
 
-        async function probeImagesFor(member, maxIndex = 30, consecutiveMissLimit = 3) {
-            const exts = ['.jpg', '.jpeg', '.png', '.webp'];
-            const found = [];
-            let missCount = 0;
+    img.onerror = () => img.remove();
+    grid.appendChild(img);
+  });
+}
 
-            for (let i = 1; i <= maxIndex; i++) {
-                let any = false;
-                for (const ext of exts) {
-                    const candidate = resolveSrc(`${member}${i}${ext}`);
-                    // eslint-disable-next-line no-await-in-loop
-                    const ok = await testImage(candidate);
-                    if (ok) {
-                        found.push(candidate);
-                        any = true;
-                        break;
-                    }
-                }
-                if (any) missCount = 0; else missCount++;
-                if (missCount >= consecutiveMissLimit && i > 3) break;
-            }
+document.getElementById("prev-btn").onclick = () => {
+  let i = integrantes.indexOf(atual);
+  atual = integrantes[(i - 1 + integrantes.length) % integrantes.length];
+  carregarGaleria();
+};
 
-            if (found.length === 0) {
-                for (const ext of ['.jpg', '.jpeg', '.png', '.webp']) {
-                    const candidate = resolveSrc(`${member}${ext}`);
-                    // eslint-disable-next-line no-await-in-loop
-                    if (await testImage(candidate)) {
-                        found.push(candidate);
-                        break;
-                    }
-                }
-            }
+document.getElementById("next-btn").onclick = () => {
+  let i = integrantes.indexOf(atual);
+  atual = integrantes[(i + 1) % integrantes.length];
+  carregarGaleria();
+};
 
-            return found;
-        }
-
-        let atual = new URLSearchParams(window.location.search).get("membro") || "jisoo";
-
-        async function carregarGaleria() {
-            const grid = document.getElementById("galeria-grid");
-            const titulo = document.getElementById("titulo-galeria");
-            const contador = document.getElementById("contador");
-
-            grid.innerHTML = "";
-            titulo.innerText = "GALERIA — " + atual.toUpperCase();
-            contador.innerText = (integrantes.indexOf(atual) + 1) + "/" + integrantes.length;
-
-            // define manualmente imagens por integrante (nomes locais ou URLs)
-            const manualByMember = {
-                jisoo: ['dbbf0d5c4d85a54d277429bfa01d8881.jpg', '45a5a6b838a01684220d4e0976c542fb.jpg', 'e2f5a436f20f558fc86d01f48c0baa44.jpg'],
-                jennie: ['jenniee.jpg', 'jennie.jpg', '0db0253d794553c34c40f508fe8263f0.jpg'],
-                rose: ['rose-linda.jpg', 'rose-maravilhosa.jpg', 'rose.jpg'],
-                lisa: ['Lisa-imagem.jpg', 'LISAA.jpg', 'lisa.jpg']
-            };
-            let manualUrls = (manualByMember[atual] || []).map(resolveSrc);
-
-            let images = [];
-            if (manualUrls.length) {
-                images = manualUrls;
-            } else {
-                const loading = document.createElement('p');
-                loading.textContent = 'Carregando imagens...';
-                grid.appendChild(loading);
-
-                images = await probeImagesFor(atual);
-
-                if (loading.parentNode) loading.parentNode.removeChild(loading);
-            }
-
-            // Se encontrou menos que MIN_IMAGES, duplica as existentes até atingir MIN_IMAGES
-            if (images.length > 0 && images.length < MIN_IMAGES) {
-                const base = images.slice();
-                let i = 0;
-                while (images.length < MIN_IMAGES) {
-                    // usa cópias; se quiser evitar cache igual, poderia adicionar '?v=' + i
-                    images.push(base[i % base.length]);
-                    i++;
-                }
-            }
-
-            if (!images || images.length === 0) {
-                const msg = document.createElement('p');
-                msg.textContent = 'Nenhuma imagem encontrada para ' + atual + '. Coloque imagens na pasta ou informe URLs.';
-                grid.appendChild(msg);
-                return;
-            }
-
-            images.forEach(src => {
-                const img = document.createElement("img");
-                img.src = src;
-                img.alt = `Foto de ${atual}`;
-                img.loading = "lazy";
-                img.className = "galeria-item-img";
-                grid.appendChild(img);
-            });
-        }
-
-        document.getElementById("prev-btn").onclick = () => {
-            let i = integrantes.indexOf(atual);
-            atual = integrantes[(i - 1 + integrantes.length) % integrantes.length];
-            carregarGaleria();
-        };
-
-        document.getElementById("next-btn").onclick = () => {
-            let i = integrantes.indexOf(atual);
-            atual = integrantes[(i + 1) % integrantes.length];
-            carregarGaleria();
-        };
-
-        carregarGaleria();
-    </script>
+carregarGaleria();
+</script>
 
 </body>
-
 </html>

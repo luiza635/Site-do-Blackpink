@@ -50,7 +50,6 @@ albums.forEach((alb, i) => {
     updateCarousel();
 
     const link = albumsData[i].link;
-
     if (link) {
       window.open(link, "_blank");
     } else {

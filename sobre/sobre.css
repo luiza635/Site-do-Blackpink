@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-/* BASE */
-body {
+  body {
   font-family: Arial, sans-serif;
   background: black;
   color: white;
@@ -13,7 +12,7 @@ body {
   line-height: 1.7;
 }
 
-/* NAV BAR */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -52,18 +51,16 @@ nav a.ativo {
   color: pink;
 }
 
-/* CONTEÚDO PRINCIPAL */
-.sobre-conteudo {
+  .sobre-conteudo {
   max-width: 950px;
   margin: 40px auto 80px auto;
   padding: 30px;
   text-align: justify;
   background: #0d0d0d;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 192, 203, 0.15);
+  
 }
 
-/* TÍTULO PRINCIPAL */
 .sobre-conteudo h1 {
   color: pink;
   text-align: center;
@@ -74,52 +71,37 @@ nav a.ativo {
   letter-spacing: 2px;
 }
 
-/* TÍTULOS DAS SEÇÕES */
 .sobre-conteudo h2 {
   color: rgb(255, 206, 214);
   margin-top: 45px;
   margin-bottom: 12px;
   font-size: 1.6em;
-  position: relative;
-  padding-left: 12px;
+  padding-left: 0;
 }
+
 
 .sobre-conteudo h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  height: 80%;
-  width: 4px;
-  background: pink;
-  border-radius: 4px;
+  display: none;
 }
 
-/* PARÁGRAFOS */
+
 .sobre-conteudo p {
   font-size: 16px;
   color: #e0e0e0;
   margin-bottom: 14px;
 }
 
-/* LISTAS COM "•" */
-.sobre-conteudo p br {
-  line-height: 2;
-}
 
-/* IMAGEM DESTAQUE */
 .fundo-destaque {
-  background: url('../sobre/BLACKPINK.jpg') center center / cover no-repeat;
+  background: url('BLACKPINKfoto.jpg') center center / cover no-repeat;
   height: 420px;
   margin: 25px 0 40px 0;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 192, 203, 0.35);
   border: 2px solid pink;
+
 }
 
-
-/* FOOTER */
-.social-footer {
+  .social-footer {
   background: transparent;
   padding: 30px 0 40px 0;
   display: flex;
@@ -139,38 +121,3 @@ nav a.ativo {
   transform: translateY(-4px);
 }
 
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .sobre-conteudo {
-    margin: 20px;
-    padding: 22px;
-  }
-
-  .sobre-conteudo h1 {
-    font-size: 2.2em;
-  }
-
-  .sobre-conteudo h2 {
-    font-size: 1.3em;
-  }
-
-  .fundo-destaque {
-    height: 260px;
-  }
-}
-
-@media (max-width: 500px) {
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .sobre-conteudo {
-    padding: 18px;
-  }
-
-  .sobre-conteudo p {
-    font-size: 14px;
-  }
-}

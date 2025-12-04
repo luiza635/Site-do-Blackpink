@@ -11,8 +11,7 @@ body {
   padding-top: 80px;
 }
 
-/* NAVBAR */
-header {
+  header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,106 +49,28 @@ nav a.ativo {
   color: pink;
 }
 
-/* CONTEÚDO */
+
 .integrantes-container {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.integrantes-container h1 {
-  color: rgb(255, 206, 214);
-  margin-bottom: 40px;
-  font-size: 3em;
-}
-
-/* GRID CORRIGIDO — TODAS NA MESMA LINHA */
-.membro-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  justify-items: center;
-}
-
-/* CARDS */
-.membro-card {
-  background-color: #111;
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 250px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(255, 192, 203, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.membro-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 5px 20px rgba(255, 192, 203, 0.5);
-}
-
-.membro-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  border: 3px solid pink;
-}
-
-.membro-card h2 {
-  color: rgb(255, 200, 209);
-  margin-bottom: 5px;
-  font-size: 1.8em;
-}
-
-.membro-card p {
-  font-size: 14px;
-  color: #ccc;
-  margin-bottom: 8px;
-}
-
-.membro-card .posicao {
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.membro-card .descricao {
-  font-size: 13px;
-  color: #fff;
-  margin-top: 15px;
-  text-align: justify;
-  line-height: 1.5;
-}
-
-/* container geral que deixa as integrantes lado a lado */
-/*/ Deixa tudo organizado em colunas lado a lado /*/
-.integrantes-container {
-  display: flex;  
+  display: flex;
   justify-content: center;
   gap: 30px;
   padding: 40px 20px;
-  flex-wrap: wrap; /* permite quebra em telas pequenas */
+  flex-wrap: wrap;
 }
 
-/* card individual */
 .membro-card {
   width: 250px;
   background: #111;
-  border: 2px solid #ffb6c9;
+  border: 2px solid #ffc8d7;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  color: white;
-  transition: 0.3s;
+  transition: .3s;
 }
 
-/*/ efeito suave sem brilho pra não cansar a vista /*/
 .membro-card:hover {
   transform: translateY(-5px);
-  border-color: #ff9bb8;
+  border-color: #ffcfdd;
 }
 
 .membro-card img {
@@ -158,63 +79,25 @@ nav a.ativo {
   margin-bottom: 15px;
 }
 
-/* nome */
 .membro-card h2 {
-  color: #ffb6c9;
+  color: #ffc8d7;
   margin-bottom: 10px;
 }
 
-/* papel principal */
 .posicao {
   font-weight: bold;
-  color: #ff9bb8;
+  color: #ffc7d6;
   margin-bottom: 10px;
 }
 
-/* descrição */
 .descricao {
   color: #d8d8d8;
   margin-bottom: 15px;
 }
 
-/* botão GALERIA */
-.botao-galeria {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: #ffb6c9;
-  color: #000;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-/*/ hover suave /*/
-.botao-galeria:hover {
-  background: #ff9bb8;
-  transform: translateY(-3px);
-}
-
-/* responsividade */
-@media (max-width: 900px) {
-  .membro-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 500px) {
-  .membro-card {
-    width: 100%;
-  }
-}
-
-
-
-/* FOOTER */
-.social-footer {
+  .social-footer {
   background: transparent;
-  padding: 25px 0;
+  padding: 30px 0 40px 0;
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -229,18 +112,5 @@ nav a.ativo {
 
 .social-footer a:hover {
   color: white;
-  transform: translateY(-3px);
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .membro-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .membro-grid {
-    grid-template-columns: 1fr;
-  }
+  transform: translateY(-4px);
 }
