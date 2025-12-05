@@ -8,8 +8,9 @@ body {
   font-family: Arial, sans-serif;
   background: black;
   color: white;
-  padding-top: 80px;
+  padding-top: 90px; 
 }
+
 
   header {
   display: flex;

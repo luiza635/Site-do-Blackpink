@@ -49,6 +49,7 @@ nav a.ativo {
   color: pink;
 }
 
+
 .galeria-container h1 {
   text-align: center;
   font-size: 2.8em;
@@ -61,16 +62,16 @@ nav a.ativo {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* sempre 3 por linha */
-  gap: 18px; /* espaço entre as fotos igual antes */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px; 
   padding: 20px;
 }
 
 .grid-fotos img {
   width: 100%;
-  height: auto;  /* impede corte */
+  height: auto;  
   border-radius: 10px;
-  border: 3px solid #ffb6c9; /* borde rosa claro */
+  border: 3px solid #ffb6c9; 
   background: #000;
 }
 
@@ -100,7 +101,7 @@ nav a.ativo {
   font-size: 18px;
 }
 
-/* FOOTER */
+
 .social-footer {
   padding: 25px 0;
   display: flex;

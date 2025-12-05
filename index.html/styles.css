@@ -49,7 +49,7 @@ nav a:hover {
 
 .hero {
   min-height: 200vh;
-  background: url("../inicio/image.png") center center / cover no-repeat;
+  background: url("image.png") center / cover no-repeat;
   padding-top: 90px;
 }
 

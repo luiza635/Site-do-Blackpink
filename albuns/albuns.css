@@ -110,3 +110,22 @@ h2 {
 p {
   color: #ccc;
 }
+
+.social-footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.social-footer a {
+  color: white;
+  font-size: 22px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social-footer a:hover {
+  color: pink;
+  transform: translateY(-4px);
+}
