@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Galeria - BLACKPINK</title>
+  <title>BLACKPINK - Galeria</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <link rel="stylesheet" href="galeria.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -14,20 +14,19 @@
 
 <header>
   <div class="logo">BLACKPINK</div>
-<nav>
-  <ul>
-    <li><a href="../index.html">Início</a></li>
-    <li><a href="../sobre/sobre.html">Sobre</a></li>
-    <li><a href="../integrantes/integrantes.html">Integrantes</a></li>
-    <li><a href="../albuns/albuns.html">Álbuns</a></li>
-    <li><a href="../merch/merch.html">Merch</a></li>
-    <li><a href="../galeria/galeria.html">Galeria</a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="../sobre/sobre.html">Sobre</a></li>
+      <li><a href="../integrantes/integrantes.html">Integrantes</a></li>
+      <li><a href="../albuns/albuns.html">Álbuns</a></li>
+      <li><a href="../merch/merch.html">Merch</a></li>
+      <li><a href="../galeria/galeria.html" class="ativo">Galeria</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main class="galeria-container">
-
   <h1 id="titulo-galeria">GALERIA</h1>
 
   <div id="galeria-grid" class="grid-fotos"></div>
@@ -37,7 +36,6 @@
     <span id="contador"></span>
     <a id="next-btn" class="seta"><i class="fa-solid fa-chevron-right"></i></a>
   </div>
-
 </main>
 
 <footer class="social-footer">
@@ -48,60 +46,7 @@
   <a href="https://x.com/BLACKPINK" target="_blank"><i class="fab fa-x-twitter"></i></a>
 </footer>
 
-<script>
-const integrantes = ["blackpink", "jisoo", "jennie", "rose", "lisa"];
-let atual = "blackpink";
-
-const galerias = {
-  blackpink: [
-    'blackpink-capa.jpg',
-    'pink-venom.jpg',
-    'imagem.jpg',
-    'imagem-show.jpg',
-    'show.jpg',
-    'born-pink.jpg'
-  ],
-
-  jisoo: ['jisoo1.jpg','jisoo2.jpg','jisoo3.jpg','jisoo4.jpg','jisoo5.jpg','jisoo6.jpg'],
-  jennie: ['jennie1.jpg','jennie2.jpg','jennie3.jpg','jennie4.jpg','jennie5.jpg','jennie6.jpg'],
-  rose:   ['rose1.jpg','rose2.jpg','rose3.jpg','rose4.jpg','rose5.jpg','rose6.jpg'],
-  lisa:   ['lisa1.jpg','lisa2.jpg','lisa3.jpg','lisa4.jpg','lisa5.jpg','lisa6.jpg']
-};
-
-function carregarGaleria() {
-  const grid = document.getElementById("galeria-grid");
-  const titulo = document.getElementById("titulo-galeria");
-  const contador = document.getElementById("contador");
-
-  grid.innerHTML = "";
-  titulo.innerText = "GALERIA — " + atual.toUpperCase();
-  contador.innerText = (integrantes.indexOf(atual) + 1) + "/" + integrantes.length;
-
-  galerias[atual].forEach(nome => {
-    const img = document.createElement("img");
-    img.src = nome;
-    img.alt = "Foto de " + atual;
-    img.loading = "lazy";
-
-    img.onerror = () => img.remove();
-    grid.appendChild(img);
-  });
-}
-
-document.getElementById("prev-btn").onclick = () => {
-  let i = integrantes.indexOf(atual);
-  atual = integrantes[(i - 1 + integrantes.length) % integrantes.length];
-  carregarGaleria();
-};
-
-document.getElementById("next-btn").onclick = () => {
-  let i = integrantes.indexOf(atual);
-  atual = integrantes[(i + 1) % integrantes.length];
-  carregarGaleria();
-};
-
-carregarGaleria();
-</script>
+<script src="galeria.js"></script>
 
 </body>
 </html>

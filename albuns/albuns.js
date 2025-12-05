@@ -14,8 +14,7 @@ const albumsData = [
   { name: "ICE CREAM (2020)", link: "https://www.youtube.com/watch?v=vRXZj0DzXIA" },
   { name: "THE ALBUM (2020)", link: "https://www.youtube.com/watch?v=dyRsYk0LyA8" },
   { name: "Pink Venom (2022)", link: "https://www.youtube.com/watch?v=gQlMMD8auMs" },
-  { name: "BORN PINK (2022)", link: "https://www.youtube.com/watch?v=POe9SOEKotk" },
-  { name: "JUMP (2025)", link: null }
+  { name: "BORN PINK (2022)", link: "https://www.youtube.com/watch?v=POe9SOEKotk" }
 ];
 
 let index = 0;

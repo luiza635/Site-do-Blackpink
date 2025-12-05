@@ -11,7 +11,7 @@ body {
   padding-top: 110px;
 }
 
-/* NAV BAR */
+
 header {
   display: flex; 
   justify-content: space-between;
@@ -50,7 +50,7 @@ nav a.ativo {
   color: pink; 
 }
 
-/* TÍTULO */
+
 .title {
   text-align: center;
   padding: 140px 20px 40px;
